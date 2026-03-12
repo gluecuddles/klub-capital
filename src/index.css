@@ -1,3 +1,163 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ── Base resets ──────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F7F6F3;
+  color: #1C1C1C;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F6F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #C7A96B;
+  border-radius: 2px;
+}
+
+/* ── Typography helpers ───────────────────────────────────────────────────── */
+.serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.thin-rule {
+  border: none;
+  border-top: 1px solid #E4E4E4;
+}
+
+.accent-line {
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: #C7A96B;
+  vertical-align: middle;
+}
+
+/* ── Form elements ────────────────────────────────────────────────────────── */
+input,
+select,
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #E4E4E4;
+  outline: none;
+  width: 100%;
+  padding: 10px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #1C1C1C;
+  transition: border-color 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ABABAB;
+  font-weight: 300;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-bottom-color: #C7A96B;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #1C1C1C;
+}
+
+select option {
+  background: #F7F6F3;
+}
+
+textarea {
+  resize: none;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-block;
+  padding: 13px 32px;
+  border: 1px solid #1C1C1C;
+  background: #1C1C1C;
+  color: #F7F6F3;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background: #C7A96B;
+  border-color: #C7A96B;
+  color: #fff;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 13px 32px;
+  border: 1px solid #1C1C1C;
+  background: transparent;
+  color: #1C1C1C;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  text-transform: uppercase;
+}
+
+.btn-outline:hover {
+  background: #1C1C1C;
+  color: #F7F6F3;
+}
+
+/* ── Text link ────────────────────────────────────────────────────────────── */
+.text-link {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1C1C1C;
+  border-bottom: 1px solid #C7A96B;
+  padding-bottom: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover {
+  color: #C7A96B;
+}
+
+/* ── Responsive helpers ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
